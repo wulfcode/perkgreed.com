@@ -1,7 +1,7 @@
 import React from 'react';
 
 const App = () => (
-  <main>
+  <main className="container">
     <h1>PerkGreed</h1>
     <p>Donec sed odio dui. Nulla vitae elit libero, a
     pharetra augue. Vestibulum id ligula porta felis euismod semper. Integer
