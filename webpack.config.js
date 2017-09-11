@@ -40,6 +40,12 @@ module.exports = {
         }),
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ],
   },
   plugins: [
