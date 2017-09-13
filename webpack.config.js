@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const sGrid = require('s-grid');
+const cssnext = require('postcss-cssnext');
+const cssSorter = require('css-declaration-sorter');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './src/index.html',
@@ -31,6 +33,15 @@ module.exports = {
           use: [
             'css-loader',
             {
+              loader: 'postcss-loader',
+              options: {
+                plugins: loader => [
+                  cssnext(),
+                  cssSorter(),
+                ],
+              },
+            },
+            {
               loader: 'stylus-loader',
               options: {
                 use: [sGrid()],
@@ -45,6 +56,7 @@ module.exports = {
         use: [
           'file-loader',
         ],
+        exclude: /node_modules/,
       },
     ],
   },
