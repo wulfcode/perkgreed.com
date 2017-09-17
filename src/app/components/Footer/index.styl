@@ -1,0 +1,36 @@
+@require '../../stylesheets/colors';
+
+.footer {
+  height: 50px;
+  background-color: alpha($background-footer, 0.6);
+
+  > div {
+    grid('row', 'center');
+    height: 100%;
+  }
+  &__left {
+    cell(1, 3);
+  }
+  &__middle {
+    cell(1, 3);
+    text-align: center;
+  }
+  &__right {
+    cell(1, 3);
+    text-align: right;
+  }
+
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 0 10px;
+      &:first-of-type {
+        padding-left: 0;
+      }
+      a {
+        border-bottom: none;
+      }
+    }
+  }
+}
