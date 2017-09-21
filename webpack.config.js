@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const sGrid = require('s-grid');
+const rupture = require('rupture');
 const cssnext = require('postcss-cssnext');
 const cssSorter = require('css-declaration-sorter');
 
@@ -47,7 +48,10 @@ module.exports = {
             {
               loader: 'stylus-loader',
               options: {
-                use: [sGrid()],
+                use: [
+                  sGrid(),
+                  rupture(),
+                ],
               },
             },
           ],

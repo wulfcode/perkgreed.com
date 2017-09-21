@@ -4,6 +4,13 @@
   &-dialog {
     color: $text-black;
     width: 50%;
-    height: 50%;
+    height: 80%;
+    +tablet() {
+      width: 80%;
+    }
+    +mobile() {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
