@@ -1,8 +1,10 @@
 @require '../../stylesheets/colors';
+@require '../../stylesheets/fonts';
 
 .footer {
   height: 50px;
   background-color: alpha($background-footer, 0.6);
+  font-family: $font-monospace;
 
   > div {
     grid('row', 'center');
@@ -18,6 +20,11 @@
   &__right {
     cell(1, 3);
     text-align: right;
+    ul {
+      a {
+        display: block;
+      }
+    }
   }
 
   ul {

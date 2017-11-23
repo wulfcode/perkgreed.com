@@ -3,6 +3,8 @@ import Rodal from 'rodal';
 import HtmlParser from 'react-html-parser';
 
 import AboutPage from '../../pages/about';
+import githubPng from '../../images/github-mark.png';
+import wafflePng from '../../images/waffleio.png';
 
 class Footer extends React.Component {
   constructor(props) {
@@ -31,7 +33,7 @@ class Footer extends React.Component {
               </li>
               <li>
                 <a href="#about" onClick={this.show}>About</a>
-                <Rodal visible={this.state.visible} onClose={this.hide} width="" height="">{HtmlParser(AboutPage)}</Rodal>
+                <Rodal visible={this.state.visible} onClose={this.hide} width="" height="" animation="fade" duration="600">{HtmlParser(AboutPage)}</Rodal>
               </li>
               <li>
                 <a href="#contact">Contact</a>
@@ -43,7 +45,8 @@ class Footer extends React.Component {
           </div>
           <div className="footer__right">
             <ul>
-              <li>right</li>
+              <li><a href="//github.com/wulfcode/perkgreed.com">Github</a></li>
+              <li><a href="//github.com/wulfcode/perkgreed.com">Waffle</a></li>
             </ul>
           </div>
         </div>
