@@ -3,8 +3,6 @@ import Rodal from 'rodal';
 import HtmlParser from 'react-html-parser';
 
 import AboutPage from '../../pages/about';
-import githubPng from '../../images/github-mark.png';
-import wafflePng from '../../images/waffleio.png';
 
 class Footer extends React.Component {
   constructor(props) {
